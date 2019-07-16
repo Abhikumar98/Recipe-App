@@ -32,10 +32,6 @@ class RecipeDetails extends React.Component{
     }
     render(){
         const recipe = this.state.recipeDetail.recipe;
-        const style={
-            display : "flex",
-            justifyContent: "spaceAround"
-        }
         if(!this.state.loaded)
         {
             console.log("loading")
@@ -46,7 +42,7 @@ class RecipeDetails extends React.Component{
                 <div>
                 {
                     this.state.recipeDetail.recipe ? 
-                    <div style={style} className="row shadow p-3 mb-5 bg-white rounded border border-secondary m-2">
+                    <div id="recipe-detail" className="row shadow p-3 mb-5 bg-white rounded border border-secondary m-2">
                         <div className="col">
                             <img responsive rounded style={{width:"44vw",alignSelf : "center"}} src={recipe.image_url} className="m-2" alt="" />
                         </div>

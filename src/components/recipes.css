@@ -2,11 +2,17 @@
     .card{
         width: 50vw;
     }
+    #recipe-detail{
+        display: block;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     .card {
         width: 40vw;
+    }
+    #recipe-detail {
+        display: block;
     }
 }
 
@@ -14,10 +20,16 @@
     .card{
         width: 30vw;
     }
+    #recipe-detail {
+        display: flex;
+    }
 }
 
 @media (min-width: 992px){
     .card {
         width: 25vw;
+    }
+    #recipe-detail {
+        display: flex;
     }
 }
