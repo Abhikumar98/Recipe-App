@@ -10,7 +10,7 @@ class RecipeDetails extends React.Component{
             recipeDetail: []
         }
         this.handleDetailSearch = this.handleDetailSearch.bind(this);
-        this.API = "eafbca33f7ddad0df9b0203b00565b47"
+        this.API = "8fa7f295c64d17abad9e518afcf0999a"
     }
     handleDetailSearch() {
         this.setState({
@@ -43,7 +43,7 @@ class RecipeDetails extends React.Component{
                 {
                     this.state.recipeDetail.recipe ? 
                     <div id="recipe-detail" className="row shadow p-3 mb-5 bg-white rounded border border-secondary m-2">
-                        <div className="col">
+                        <div style={{textAlign: "center"}} className="col">
                             <img responsive rounded style={{width:"44vw",alignSelf : "center"}} src={recipe.image_url} className="m-2" alt="" />
                         </div>
                         <div className="col">
