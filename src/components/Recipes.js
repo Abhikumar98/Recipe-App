@@ -1,5 +1,6 @@
 import React from 'react';
 import './recipes.css';
+import { Link } from 'react-router-dom';
 
 class Recipes extends React.Component{
     render(){
@@ -10,7 +11,10 @@ class Recipes extends React.Component{
                 <div className="card-body">
                     <h5 className="card-title">{details.details.title}</h5>
                     <p className="card-text">Publisher : {details.details.publisher}</p>
-                    <a href={details.details.source_url} className="btn btn-block btn-outline-primary" target="_blank">View Details</a>
+                    <a href={details.details.publisher_url} className="btn btn-block btn-outline-info" target="_blank">Publisher URL</a>
+                    <Link to={{
+                        pathname: `/recipe/${details.details.recipe_id}`,
+                    }} className="btn btn-block btn-outline-primary" target="_blank">Get Details</Link>
                 </div>
             </div>
         )
