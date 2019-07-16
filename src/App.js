@@ -22,7 +22,7 @@ class App extends React.Component{
         })
         const modifiedQuery = query.trim().replace(/ /g,"%20")
         const API = "08b4e8310911747400194634cefeb0b1"
-        fetch(`https://www.food2fork.com/api/search?key=${API}&q=${query}`)
+        fetch(`https://www.food2fork.com/api/search?key=${API}&q=${modifiedQuery}`)
             .then((result) => result.json())
             .then((data) => {
                 this.setState({

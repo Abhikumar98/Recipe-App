@@ -1,5 +1,4 @@
 import React from 'react';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Loading = (props) =>
 {
