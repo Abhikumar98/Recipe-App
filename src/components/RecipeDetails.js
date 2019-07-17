@@ -12,19 +12,17 @@ class RecipeDetails extends React.Component{
         this.handleDetailSearch = this.handleDetailSearch.bind(this);
         this.API = "8fa7f295c64d17abad9e518afcf0999a"
     }
-    handleDetailSearch() {
+    async handleDetailSearch() {
         this.setState({
             loaded: false
         })
         const id = (this.props.location.pathname).split("/")[2]
         console.log("url params ======>", id)
-        fetch(`https://www.food2fork.com/api/get?key=${this.API}&rId=${id}`)
-            .then((result) => result.json())
-            .then((data) => {
-                this.setState({
-                    loaded: true,
-                    recipeDetail: data
-                })
+        const response = await fetch(`https://www.food2fork.com/api/get?key=${this.API}&rId=${id}`)
+        const json = await response.json()
+        this.setState({
+            loaded: true,
+            recipeDetail: json
             })
     }
     componentDidMount(){

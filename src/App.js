@@ -16,18 +16,16 @@ class App extends React.Component{
         this.handleSearch = this.handleSearch.bind(this);
         this.API = "8fa7f295c64d17abad9e518afcf0999a"
     }
-    handleSearch(query = "") {
+    async handleSearch(query = "") {
         this.setState({
             loaded: false
         })
         const modifiedQuery = query.trim().replace(/ /g, "%20")
-        fetch(`https://www.food2fork.com/api/search?key=${this.API}&q=${modifiedQuery}`)
-            .then((result) => result.json())
-            .then((data) => {
-                this.setState({
-                    loaded: true,
-                    recipes: data,
-                })
+        const response = await fetch(`https://www.food2fork.com/api/search?key=${this.API}&q=${modifiedQuery}`)
+        const json = await response.json()
+        this.setState({
+            loaded: true,
+            recipes: json,
             })
     }
     componentDidMount()
