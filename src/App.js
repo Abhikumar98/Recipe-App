@@ -14,7 +14,7 @@ class App extends React.Component{
             recipes: [],
         }
         this.handleSearch = this.handleSearch.bind(this);
-        this.API = "8fa7f295c64d17abad9e518afcf0999a"
+        this.API = "05a1962125d7668fd374fd3b636382c8"
     }
     async handleSearch(query = "") {
         this.setState({

@@ -6,7 +6,7 @@ class Recipes extends React.Component{
     render(){
         const details = this.props
         return(
-            <div className="card shadow p-3 mb-5 bg-white rounded border border-secondary m-2" style={{}}>
+            <div className="card shadow p-3 mb-5 bg-white rounded border border-secondary m-2" >
                 <img style={{maxHeight:"35vh"}} src={details.details.image_url} className="card-img-top" alt="" />
                 <div className="card-body">
                     <h5 className="card-title">{details.details.title}</h5>

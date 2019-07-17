@@ -3,7 +3,7 @@ import { ListGroup } from 'react-bootstrap';
 
 const Ingredients =(props)=>{
     return(
-        <div>
+        <div id="ingredients" className="border p-2">
             <ListGroup>
                 <h6>Ingredients : </h6>
                 {

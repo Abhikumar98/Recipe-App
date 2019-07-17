@@ -10,7 +10,7 @@ class RecipeDetails extends React.Component{
             recipeDetail: []
         }
         this.handleDetailSearch = this.handleDetailSearch.bind(this);
-        this.API = "8fa7f295c64d17abad9e518afcf0999a"
+        this.API = "05a1962125d7668fd374fd3b636382c8"
     }
     async handleDetailSearch() {
         this.setState({
@@ -40,17 +40,26 @@ class RecipeDetails extends React.Component{
                 <div>
                 {
                     this.state.recipeDetail.recipe ? 
-                    <div id="recipe-detail" className="row shadow p-3 mb-5 bg-white rounded border border-secondary m-2">
+                    <div id="recipe-detail" 
+                        className="row shadow p-3 bg-white rounded border border-secondary m-2">
                         <div style={{textAlign: "center"}} className="col">
-                            <img responsive rounded style={{width:"44vw",alignSelf : "center"}} src={recipe.image_url} className="m-2" alt="" />
+                            <img responsive rounded 
+                                 style={{width:"44vw",alignSelf : "center"}} 
+                                 src={recipe.image_url} 
+                                 className="m-2" alt="" />
                         </div>
                         <div className="col">
-                            {console.log(recipe.ingredients)}
                             <h5 className="card-title">{recipe.title}</h5>                            
                             <p className="card-text">Publisher : {recipe.publisher}</p>
-                            <Ingredients ingredients={recipe.ingredients}/>
-                            <a href={recipe.publisher_url} bsSize="large" className="btn btn-outline-info m-2" target="_blank">Publisher</a>
-                            <a href={recipe.source_url} bsSize="large" className="btn  btn-outline-primary m-2" target="_blank">Go to Recipe</a>
+                            <Ingredients id="ingredients" ingredients={recipe.ingredients}/>
+                            <a href={recipe.publisher_url} bsSize="large" 
+                                className="btn btn-outline-info m-2" target="_blank">
+                                Publisher
+                            </a>
+                            <a href={recipe.source_url} bsSize="large" 
+                                className="btn  btn-outline-primary m-2" target="_blank">
+                                Go to Recipe
+                            </a>
                         </div>
                     </div>
                     

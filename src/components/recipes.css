@@ -20,6 +20,10 @@
     .card{
         width: 30vw;
     }
+    #ingredients{
+        max-height: 70vh;
+        overflow: auto;
+    }
     #recipe-detail {
         display: flex;
     }
@@ -31,5 +35,9 @@
     }
     #recipe-detail {
         display: flex;
+    }
+    #ingredients{
+        max-height: 70vh;
+        overflow: auto;
     }
 }
