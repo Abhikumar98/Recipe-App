@@ -6,7 +6,7 @@ import RecipeDetails from './components/RecipeDetails';
 class Routes extends React.Component{
     render(){
         return(
-            <Router>
+            <Router basename="/Recipe-App">
                 <Switch>
                     <Route path="/" exact render={(props) => <App {...props} />}/>
                     <Route path="/recipe/:id" render={(props) => <RecipeDetails {...props} />}/>
