@@ -9,7 +9,7 @@ class Routes extends React.Component{
             <Router basename={process.env.PUBLIC_URL}>
                 <Switch>
                     <Route path="/" exact render={(props) => <App {...props} />}/>
-                    <Route path="/recipe/:id" render={(props) => <RecipeDetails {...props} />}/>
+                    <Route path={`${process.env.PUBLIC_URL}/recipe/:id`} render={(props) => <RecipeDetails {...props} />}/>
                 </Switch>
             </Router>
         )
