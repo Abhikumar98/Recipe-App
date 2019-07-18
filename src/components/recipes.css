@@ -1,6 +1,6 @@
 @media (max-width: 575.98px) {
     .card{
-        width: 50vw;
+        width: 100%;
     }
     #recipe-detail{
         display: block;

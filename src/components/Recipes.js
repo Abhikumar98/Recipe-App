@@ -13,7 +13,7 @@ class Recipes extends React.Component{
                     <p className="card-text">Publisher : {details.details.publisher}</p>
                     <a href={details.details.publisher_url} className="btn btn-block btn-outline-info" target="_blank">Publisher URL</a>
                     <Link to={{
-                        pathname: `${process.env.PUBLIC_URL}/recipe/${details.details.recipe_id}`,
+                        pathname: `/recipe/${details.details.recipe_id}`,
                     }} className="btn btn-block btn-outline-primary" target="_blank">Get Details</Link>
                 </div>
             </div>
