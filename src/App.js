@@ -10,11 +10,11 @@ class App extends React.Component{
     constructor(props) {
         super()
         this.state = {
-            loaded: true, //when not using api change to true
+            loaded: false, //when not using api change to true
             recipes: [],
         }
         this.handleSearch = this.handleSearch.bind(this);
-        this.API = "05a1962125d7668fd374fd3b636382c8"
+        this.API = process.env.REACT_APP_API_KEY
     }
     async handleSearch(query = "") {
         this.setState({
@@ -43,9 +43,9 @@ class App extends React.Component{
                 <SearchBar handleSearch={this.handleSearch} />
                 <div className="d-flex flex-wrap justify-content-center m-2">
                     {
-                        // this.state.recipes.recipes ? this.state.recipes.recipes.map((item,i) => <Recipes details={item} key={i} />) 
-                        // : <h3>Sorry API Usage Limit is Crossed.<br/> Go to <a href="https://www.food2fork.com/register?_next=http%3A%2F%2Fwww.food2fork.com%2F" target="_blank">www.food2fork.com</a> and generate a new API-key and replace in the code. </h3>
-                        (data.recipes).map((item,i) => <Recipes details={item} key={i} />)
+                        this.state.recipes.recipes ? this.state.recipes.recipes.map((item,i) => <Recipes details={item} key={i} />) 
+                        : <h3>Sorry API Usage Limit is Crossed.<br/> Go to <a href="https://www.food2fork.com/register?_next=http%3A%2F%2Fwww.food2fork.com%2F" target="_blank">www.food2fork.com</a> and generate a new API-key and replace in the code. </h3>
+                        // (data.recipes).map((item,i) => <Recipes details={item} key={i} />)
                     }
                 </div>
                 

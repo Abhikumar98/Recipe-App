@@ -10,7 +10,7 @@ class RecipeDetails extends React.Component{
             recipeDetail: []
         }
         this.handleDetailSearch = this.handleDetailSearch.bind(this);
-        this.API = "05a1962125d7668fd374fd3b636382c8"
+        this.API = process.env.REACT_APP_API_KEY;
     }
     async handleDetailSearch() {
         this.setState({
