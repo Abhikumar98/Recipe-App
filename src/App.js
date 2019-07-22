@@ -4,6 +4,7 @@ import Recipes from './components/Recipes';
 import data from './JsonData';
 import './components/recipes.css';
 import Loading from './components/Loading';
+import InvalidSearch from './components/InvalidSearch';
 
 
 class App extends React.Component{
@@ -47,6 +48,7 @@ class App extends React.Component{
                         : <h3>Sorry API Usage Limit is Crossed.<br/> Go to <a href="https://www.food2fork.com/register?_next=http%3A%2F%2Fwww.food2fork.com%2F" target="_blank">www.food2fork.com</a> and generate a new API-key and replace in the code. </h3>
                         // (data.recipes).map((item,i) => <Recipes details={item} key={i} />)
                     }
+                    { this.state.recipes.count == 0 && <InvalidSearch /> }
                 </div>
                 
             </div>

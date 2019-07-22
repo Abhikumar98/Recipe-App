@@ -1,6 +1,8 @@
 import React from 'react';
 import Loading from './Loading.js';
 import Ingredients from './Ingredients';
+import { Link } from 'react-router-dom';
+
 
 class RecipeDetails extends React.Component{
     constructor(props) {
@@ -29,6 +31,13 @@ class RecipeDetails extends React.Component{
         this.handleDetailSearch()
     }
     render(){
+
+        const styles={
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+        }
+
         const recipe = this.state.recipeDetail.recipe;
         if(!this.state.loaded)
         {
@@ -37,7 +46,7 @@ class RecipeDetails extends React.Component{
         }
         else{
             return(
-                <div>
+                <div style={styles}>
                 {
                     this.state.recipeDetail.recipe ? 
                     <div id="recipe-detail" 
@@ -65,6 +74,9 @@ class RecipeDetails extends React.Component{
                     
                     : <h1>API usage over </h1>
                 }
+                <Link to="/">
+                    <button className="btn btn-primary ml-2" onClick={this.handleClick}>Home</button>
+                </Link>
             </div>
         )
             }

@@ -1,9 +1,26 @@
+#error-msg{
+  height: 50vh;
+  width:60vw;
+  margin-top: 5%;
+  font-size: 2em;
+  background-color: white;
+  box-shadow: 4px 4px 10px 2px lightgray;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+
 @media (max-width: 575.98px) {
     .card{
         width: 100%;
     }
     #recipe-detail{
         display: block;
+    }
+    #error-msg{
+        font-size: 1.3em;
     }
 }
 
@@ -13,6 +30,9 @@
     }
     #recipe-detail {
         display: block;
+    }
+    #error-msg{
+        font-size: 1.7em;
     }
 }
 
@@ -40,4 +60,5 @@
         max-height: 70vh;
         overflow: auto;
     }
+
 }
